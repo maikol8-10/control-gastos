@@ -42,6 +42,7 @@ function App() {
       //Actualizar
       const gastosActualizados = gastos.map(gastoState => gastoState.id === gasto.id ? gasto : gastoState); //Si el gasto del state es igual a gasto que está recibiendo, retorna el gasto que está recibiendo, caso contrario retorna lo que está en el state
       setGastos(gastosActualizados);
+      setGastoEditar({});
     } else {
       //Nuevo Gasto
       gasto.id = generarId();
@@ -95,6 +96,7 @@ function App() {
         setAnimarModal={setAnimarModal}
         guardarGasto={guardarGasto}
         gastoEditar={gastoEditar}
+        setGastoEditar={setGastoEditar}
       />}
 
     </div>
